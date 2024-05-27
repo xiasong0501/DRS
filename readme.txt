@@ -1,7 +1,9 @@
 ###### to evaluate the certified robustness
-
+##### pls download our trained model via https://drive.google.com/drive/folders/1IZFqJm58d9Sp54zVEE3tMcsXAouFri_l?usp=sharing
+##### pls download the cifar10 dataset and put it into dir "dataset_cache"
 ### 0.18 is the sigma value, "models/cifar10/resnet110/" is the folder for the ckpt  'data/certify/cifar10/resnet110/boost_ours/diff_smoothadv/sigma_0.18' is the log_file path
 ### To test different models trained by Gaussian and consistency, please change "--mode org" to "--mode consistency" and 0.18 to 0.36
+
 CUDA_VISIBLE_DEVICES=0 python certify_resnet110_lowres_2.py cifar10 models/cifar10/resnet110/ 0.18 data/certify/cifar10/resnet110/org/sigma_0.18 --skip 5 --N 10000 --mode org
 
 
