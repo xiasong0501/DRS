@@ -21,5 +21,5 @@ CUDA_VISIBLE_DEVICES=1 python cifar_model_lower_2.py cifar10 cifar_resnet110 --s
 
 
 # Then train the model on imagenet for dual randomized smoothing
-CUDA_VISIBLE_DEVICES=0 python cifar_model_lower_2.py imagenet resnet50 --sigma 0.18  --batch 256 --N 1 --lr 0.00001 --out_dir models/cifar10/resnet50/  --pos r --scracth cohen_0.25 --mode org
-CUDA_VISIBLE_DEVICES=1 python cifar_model_lower_2.py imagenet resnet110 --sigma 0.18  --batch 256 --N 1 --lr 0.00001 --out_dir models/cifar10/resnet50/  --pos l --scracth cohen_0.25 --mode org
+CUDA_VISIBLE_DEVICES=0 python imagenet_model_lower_2.py imagenet resnet50 --sigma 0.18  --batch 256 --N 1 --lr 0.00001 --out_dir models/imagenet/resnet50/  --pos r --scracth cohen_0.25 --mode org
+CUDA_VISIBLE_DEVICES=1 python imagenet_model_lower_2.py imagenet resnet110 --sigma 0.18  --batch 256 --N 1 --lr 0.00001 --out_dir models/imagenet/resnet50/  --pos l --scracth cohen_0.25 --mode org
