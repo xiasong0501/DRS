@@ -1,4 +1,6 @@
 
+This is the code for paper "Mitigating the Curse of Dimensionality for Certified Robustness via Dual Randomized Smoothing"
+
 ##### pls download our trained model via https://drive.google.com/drive/folders/1IZFqJm58d9Sp54zVEE3tMcsXAouFri_l?usp=sharing
 ##### pls download the cifar10 dataset and put it into dir "dataset_cache"
 
@@ -24,3 +26,12 @@ CUDA_VISIBLE_DEVICES=1 python cifar_model_lower_2.py cifar10 cifar_resnet110 --s
 CUDA_VISIBLE_DEVICES=0 python imagenet_model_lower_2.py imagenet resnet50 --sigma 0.18  --batch 256 --N 1 --lr 0.00001 --out_dir models/imagenet/resnet50/  --pos r --scracth cohen_0.25 --mode org
 CUDA_VISIBLE_DEVICES=1 python imagenet_model_lower_2.py imagenet resnet50 --sigma 0.18  --batch 256 --N 1 --lr 0.00001 --out_dir models/imagenet/resnet50/  --pos l --scracth cohen_0.25 --mode org 
 
+if you find this code help, please consider cite:
+@inproceedings{
+xia2024mitigating,
+title={Mitigating the Curse of Dimensionality for Certified Robustness via Dual Randomized Smoothing},
+author={Song Xia and Yi Yu and Xudong Jiang and Henghui Ding},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=C1sQBG6Sqp}
+}
