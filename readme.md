@@ -31,6 +31,7 @@ CUDA_VISIBLE_DEVICES=1 python cifar_model_lower_2.py cifar10 cifar_resnet110 --s
 **If you want to combine your own method with our DS_RS, we strongly recommend using the proposed method to train a model on the original cifar10 image first and then fine-tuning DRS based on the pre-trained model**
 
 If you find this code helpful, please consider citing:
+
 @inproceedings{
 xia2024mitigating,
 title={Mitigating the Curse of Dimensionality for Certified Robustness via Dual Randomized Smoothing},
