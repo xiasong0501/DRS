@@ -10,8 +10,7 @@
 ```python
 CUDA_VISIBLE_DEVICES=0 python certify_resnet110_lowres_2.py cifar10 models/cifar10/resnet110/ 0.18 data/certify/cifar10/resnet110/org/sigma_0.18 --skip 5 --N 10000 --mode org
 ```
-**
-where 0.18 is the sigma value, "models/cifar10/resnet110/" is the folder for the ckpt  'data/certify/cifar10/resnet110/boost_ours/diff_smoothadv/sigma_0.18' is the log_file path**
+**where 0.18 is the sigma value, "models/cifar10/resnet110/" is the folder for the ckpt  'data/certify/cifar10/resnet110/boost_ours/diff_smoothadv/sigma_0.18' is the log_file path**
 
 **To test different models trained by Gaussian and consistency, please change "--mode org" to "--mode consistency" and 0.18 to 0.36**
 
@@ -29,11 +28,9 @@ CUDA_VISIBLE_DEVICES=0 python cifar_model_lower_2.py cifar10 cifar_resnet110 --s
 ```python
 CUDA_VISIBLE_DEVICES=1 python cifar_model_lower_2.py cifar10 cifar_resnet110 --sigma 0.18  --batch 256 --N 1 --lr 0.001 --out_dir models/cifar10/resnet110/  --pos l --scracth c_smoothadv_0.25 --mode org
 ```
-**
-If you want to combine your own method with our DS_RS, we strongly recommend using the proposed method to train a model on the original cifar10 image first and then fine-tuning DRS based on the pre-trained model**
+**If you want to combine your own method with our DS_RS, we strongly recommend using the proposed method to train a model on the original cifar10 image first and then fine-tuning DRS based on the pre-trained model**
 
-**
-if you find this code help, please consider cite:
+**if you find this code help, please consider cite:
 @inproceedings{
 xia2024mitigating,
 title={Mitigating the Curse of Dimensionality for Certified Robustness via Dual Randomized Smoothing},
