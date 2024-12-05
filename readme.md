@@ -32,6 +32,7 @@ CUDA_VISIBLE_DEVICES=1 python cifar_model_lower_2.py cifar10 cifar_resnet110 --s
 
 If you find this code helpful, please consider citing:
 
+
 @inproceedings{
 xia2024mitigating,
 title={Mitigating the Curse of Dimensionality for Certified Robustness via Dual Randomized Smoothing},
